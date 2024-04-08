@@ -163,7 +163,7 @@ if st.session_state.start_chat:
         run = client.beta.threads.runs.create(
             thread_id=st.session_state.thread_id,
             assistant_id=assistant_id,
-            instructions="Please answer the queries using the knowledge provided in the files.When adding other information mark it clearly as such.with a different color"
+            instructions="These are insurance documents that may have information on one insurance product or information on multiple insurance products. The insurance products may include health/medical, short term and long term disability, Life, Voluntary life, dental, vision, accident, hospital and more. Could you please tell me the key provisions of each insurance product listed, such as plan types, benefit maxes (for each product), and rates/month costs (which could be singular or multiple values in a table for each product)."
         )
 
         # Poll for the run to complete and retrieve the assistant's messages
